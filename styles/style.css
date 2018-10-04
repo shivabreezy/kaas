@@ -1,0 +1,395 @@
+/* Algemene styling */
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3{
+	color: #E59935;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 15px;
+}
+
+h1{
+	font-size: 18px;
+}
+
+h2{
+	font-size: 14px;
+}
+
+h3{
+	font-size: 12px;
+}
+
+p{
+	font-size: 12px;
+	margin: 15px;
+}
+
+button{
+	background-color: #B37829;
+	border: none;
+	color: #fff;
+	border-radius: 15px;
+	font-family: 'Montserrat', sans-serif; 
+	font-weight: 600;
+	text-transform: uppercase;
+	height: 40px;
+	width: 130px;
+}
+
+button:hover{
+	background-color: #E59935;
+	transition:all 0.8s ease;
+	cursor: pointer;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"logo hamburger"
+	"menu menu"
+	"header header"
+	"text text"
+	"image image"
+	"nieuwsbrief nieuwsbrief"
+	"route route"
+	"weblog weblog"
+	"footer footer";
+}
+
+.active{
+  display: initial;
+}
+
+.inactive{
+  display: none;
+}
+
+.actief{
+	background-color: #E59935;
+	color: #FFF;
+	padding: 15px
+}
+
+.placeholder{
+	object-fit: cover;
+	height: 200px;
+}
+
+
+.team{
+	max-width: 100%;
+	margin-bottom: 80px;
+}
+
+.grid-item{
+	padding: 30px;
+}
+
+/* Navigatie */
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 1em;
+  margin: 0.4em;
+  list-style: none;
+  justify-content: center;
+}
+
+nav ul li a {
+  color: #505050;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover{
+	background-color: #E4E4E4;
+	transition:all 0.8s ease;
+}
+
+/* Foto's/Iconen */
+
+.placeholder{
+	width: 100%; 
+}
+
+.svg{
+	width: 60px;
+	height: 60px;
+}
+
+.social{
+	width: 40px;
+	height: 40px;
+}
+
+.social:hover{
+	opacity: 0.5;
+	transition:all 0.8s ease;
+	cursor: pointer;
+}
+
+/* Logo */
+
+.logo{
+	grid-area: logo;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #3B3B3B;
+}
+
+.logo:hover{
+	opacity: 0.5;
+	transition:all 0.8s ease;
+}
+
+.logo-clk{
+	text-decoration: none;
+	cursor: auto;
+}
+
+.kaas{
+	color: #E59935;
+	font-weight: 700;
+	list-style-type: none;
+ 	text-decoration: none;
+}
+
+/* Grid areas */
+
+.navigatie {
+  grid-area: menu;
+}
+
+.navigatie a{
+	padding: 15px;
+}
+
+.hamburger{
+	grid-area: hamburger;
+}
+
+.menu-toggle{
+  float: right;
+}
+
+.menu-toggle a{
+  color: #E59935;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.text{
+	grid-area: text;
+}
+
+.text a:hover{
+	color: #B37829;
+	transition:all 0.8s ease;
+}
+
+.header{
+	grid-area: header;
+}
+
+.image{
+	grid-area: image;
+}
+
+.nieuwsbrief{
+	grid-area: nieuwsbrief;
+	text-align: center;
+}
+
+.route{
+	grid-area: route;
+	text-align: center;
+}
+
+.weblog{
+	grid-area: weblog;
+	text-align: center;
+}
+
+.footer{
+	grid-area: footer;
+	text-align: center;
+	background-color: #E4E4E4;
+}
+
+.grid-item.text{
+	margin-top: 80px;
+}
+
+.grid-item.nieuwsbrief,.grid-item.text, .grid-item.weblog, .grid-item.route, .grid-item.social{
+	margin-bottom: 80px;
+}
+
+.footer a{
+	color: #505050;
+	list-style-type: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.footer li{
+	list-style-type: none;
+	padding: 5px;
+}
+
+.footer ul{
+	margin-bottom: 15px;
+}
+
+/* Breakpoint: Tablet */
+
+@media screen and (min-width: 768px) {
+
+	.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"logo hamburger"
+	"menu menu"
+	"header header"
+	"text text"
+	"image image"
+	"nieuwsbrief route"
+	"weblog weblog"
+	"footer footer";
+	}
+
+	h1{
+		font-size: 20px;
+	}
+
+	h2{
+		font-size: 18px;
+	}
+
+	h3{
+		font-size: 14px;
+	}
+
+	p{
+		font-size: 14px;
+		margin: 15px;
+	}
+
+	.placeholder{
+		object-fit: cover;
+		height: 300px;
+	}
+
+	.svg{
+		width: 70px;
+		height: 70px;
+	}
+
+	.social{
+		width: 50px;
+		height: 50px;
+	}
+
+}
+
+/* Breakpoint: Laptop */
+
+@media screen and (min-width: 1024px) {
+
+	.grid-container{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 
+	"logo menu menu"
+	"header header header"
+	"text text image"
+	"nieuwsbrief route weblog"
+	"footer footer footer";
+	}
+
+	.team{
+	max-width: 100%;
+	margin-bottom: 80px;
+	margin-top: 80px;
+	}
+
+	nav ul li {
+		margin: 0em;
+	}
+
+	.topnav{
+		display: block;
+	}
+
+	.grid-item{
+		padding: 50px;
+	}
+
+	.placeholder{
+		object-fit: cover;
+		height: 400px;
+	}
+
+	.svg{
+		width: 80px;
+		height: 80px;
+	}
+
+	h1{
+			font-size: 24px;
+	}
+
+	h2{
+			font-size: 18px;
+	}
+
+	h3{
+			font-size: 16px;
+	}
+
+	p{
+		font-size: 16px;
+	}	
+  
+  	nav ul{
+    	flex-flow: row;
+  	}
+
+  	nav ul li a{
+    	padding: 15px;
+  	}
+
+  	.inactive{
+    	display: initial;
+  	}
+
+  	.menu-toggle{
+    	display: none;
+  	}
+
+  	.hamburger{
+  		display: none;
+  	}
+}
